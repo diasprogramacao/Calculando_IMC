@@ -1,1 +1,67 @@
+<meta charset=UTF-8 >
 
+<h1> Calculando seu IMC </h1>
+
+
+
+IMC menor que 18,45 está abaixo do esperado. 
+<br>
+IMC 18,45 à 30,50 está com o IMC execelente.
+<br>
+IMC 30,51 em diate está acima do esperado.
+<br>  
+
+<br>
+<br>
+
+
+<Script>
+
+function pulalinha ()  {
+
+    document.write ("<br>") ;
+    document.write ("<br>") ; 
+}
+
+function mostra(frase) {
+
+	document.write(frase);
+
+}
+
+function informacao(altura,peso){
+
+return peso / (altura*altura) ;
+
+}
+
+
+var nomeP = prompt(" Qual é o seu nome ?  : ") ; 
+var alturaP = prompt("Informe sua altura") ;  
+var pesoP = parseInt (prompt("Informe seu peso")) ; 
+var imccalculado = informacao(alturaP,pesoP) ;
+
+
+
+mostra(nomeP + "  seu IMC calculando é  :  " + imccalculado ) ; 
+
+pulalinha();
+
+if (imccalculado < 18.45 ) {
+
+mostra("Seu IMC está abaixo do comum  :  " ) ;
+
+}
+
+if (imccalculado >= 18.45 ) {
+
+if (imccalculado <= 30.50 ) {
+
+mostra("Seu IMC está excelente "); }
+
+}
+if (imccalculado > 30.50) {  
+
+mostra("Seu IMC está acima do comum : ");  }
+
+</Script>
